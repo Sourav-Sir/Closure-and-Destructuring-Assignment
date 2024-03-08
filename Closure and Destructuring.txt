@@ -1,0 +1,87 @@
+1. You are building a counter application that tracks the number of times a button is clicked. Implement the counter using closure.
+
+2. You have an object representing a customer order with properties orderId, productName, and quantity. Use destructuring to extract and print these properties.
+
+let order = {
+    orderId: "123456",
+    productName: "Laptop",
+    quantity: 2,
+};
+
+3. In this coding challenge let's try to implement the cart feature using javascript closure. Using JS closures try to create a cart array and return a function to getCartItems.
+
+const cart = shoppingCart();
+
+console.log(`Cart Item:`, cart.getCartItems());
+
+// OUTPUT: Cart Items: []
+
+4. Continuing the previous coding challenge, now let’s implement the add to cart feature. On calling add to cart closure function, the object of productId, name, quantity and price should be added to the cartItem. Note that if duplicate items with same prouductId is added, the product quantity must be incremented. Use javascript closures to achieve the output.
+
+const cart = shoppingCart();
+
+console.log(`Cart Item:`, cart.getCartItems());
+// OUTPUT: Cart Items: []
+
+const product1 = {id: 1, name: 'product 1', price: 10};
+const product2 = {id: 2, name: 'product 2', price: 20};
+
+cart.addItem(product1);
+cart.addItem(product2);
+cart.addItem(product1);
+
+console.log('Cart Items:', cart.getCartItems());
+
+//OUTPUT:
+
+// Cart Items: [
+//     {id: 1, name: 'product 1', price: 10, quantity: 2};
+//     {id: 2, name: 'product 2', price: 20, quantity: 2};
+// ]
+
+
+5. Continuing the previous coding challenge, now let’s implement the remove item from cart feature. On calling the remove item closure function, the specified productId item must be removed from cartItems array. Use javascript closures to achieve the output.
+
+const cart = shoppingCart();
+
+console.log(`Cart Item:`, cart.getCartItems());
+// OUTPUT: Cart Items: []
+
+const product1 = {id: 1, name: 'product 1', price: 10};
+const product2 = {id: 2, name: 'product 2', price: 20};
+
+cart.addItem(product1);
+cart.addItem(product2);
+cart.addItem(product1);
+
+console.log('Cart Items:', cart.getCartItems());
+
+//OUTPUT:
+
+// Cart Items: [
+//     {id: 1, name: 'product 1', price: 10, quantity: 2}
+//     {id: 2, name: 'product 2', price: 20, quantity: 2}
+// ]
+
+cart.removeItem(2);
+
+console.log('Cart Items: ', cart.getCartItems());
+//OUTPUT: Cart Items: [{id: 1, name: 'product 1', price: 10, quantity: 2}]
+
+
+6. You are developing a music playlist management system. Implement functions that leverage closures and higher-order functions to perform common playlist operations.
+
+Task 1: Create a function createPlaylist that takes a playlist name as a parameter and returns a closure. This closure should allow adding and listing songs for the given playlist.
+
+Task 2: Create a function addSong that takes a song name and artist as parameters and adds the song to the specified playlist. Use the closure created in TASK 1.
+
+Task 3: Create a function listSongs that lists all the songs in a specified playlist. Use the closure created in the Task 1
+
+// Task: PlayList Management
+const myPlayist = createPlaylist("My Favorites");
+
+addSong(myPlayist, "Song1", "Artist1");
+addSong(myPlayist, "Song2", "Artist2");
+addSong(myPlayist, "Song3", "Artist3");
+
+listSongs(myPlayist); // Output: My Favourites Playlist: Song1 by Artist1, Song2 by Artist2, Song3 by Artist3
